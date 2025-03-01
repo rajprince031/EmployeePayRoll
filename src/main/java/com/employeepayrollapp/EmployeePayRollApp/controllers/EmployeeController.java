@@ -4,6 +4,7 @@ package com.employeepayrollapp.EmployeePayRollApp.controllers;
 import com.employeepayrollapp.EmployeePayRollApp.dto.EmployeeDTO;
 import com.employeepayrollapp.EmployeePayRollApp.entities.EmployeeEntity;
 import com.employeepayrollapp.EmployeePayRollApp.services.EmployeeService;
+import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -30,7 +31,7 @@ public class EmployeeController {
     }
 
     @PostMapping
-    public ResponseEntity<EmployeeDTO> createNewEmployee(@RequestBody EmployeeEntity employeeEntity){
+    public ResponseEntity<EmployeeDTO> createNewEmployee(@Valid @RequestBody EmployeeEntity employeeEntity){
         logger.info("Create new employee");
         return employeeService.createNewEmployee(employeeEntity);
     }
