@@ -14,7 +14,7 @@
             </pattern>
         </encoder>
         <File>
-            journalApp.log
+            appLogFile.log
         </File>
     </appender>
 
