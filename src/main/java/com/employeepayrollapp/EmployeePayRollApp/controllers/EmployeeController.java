@@ -11,6 +11,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/user")
 public class EmployeeController {
@@ -46,5 +48,11 @@ public class EmployeeController {
     public ResponseEntity<EmployeeDTO> deleteEmployee(@PathVariable Integer id){
         logger.info("delete employee");
         return employeeService.deleteEmployee(id);
+    }
+
+    @GetMapping
+    public ResponseEntity<List<EmployeeDTO>> getAllEmployees(){
+        logger.info("get all employees");
+        return employeeService.getAllEmployees();
     }
 }
