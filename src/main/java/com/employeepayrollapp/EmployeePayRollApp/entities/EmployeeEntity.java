@@ -23,8 +23,9 @@ public class EmployeeEntity {
     @NotBlank(message = "Name Cannot be empty")
     @Pattern(regexp = "^[A-Z][a-zA-Z\\s]{2,}" , message = "Name must start with a capital letter and be least 3 characters long")
     private String name;
+    private String gender;
     private String Department;
     private Double salary;
-    @JsonFormat(pattern = "dd-MM-yyyy")
+    @JsonFormat(pattern = "yyy-MM-dd")
     private LocalDate joiningDate;
 }

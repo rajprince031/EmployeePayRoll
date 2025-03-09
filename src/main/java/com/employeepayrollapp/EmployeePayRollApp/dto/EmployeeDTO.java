@@ -13,7 +13,8 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class EmployeeDTO {
 
-   private String name;
+    private String name;
+    private String gender;
     private String Department;
     private Double salary;
     private LocalDate joiningDate;
