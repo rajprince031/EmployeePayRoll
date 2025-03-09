@@ -35,6 +35,7 @@ public class EmployeeController {
     @PostMapping
     public ResponseEntity<EmployeeDTO> createNewEmployee(@Valid @RequestBody EmployeeEntity employeeEntity){
         logger.info("Create new employee");
+        System.out.println("---------------"+employeeEntity.getJoiningDate()+"----------");
         return employeeService.createNewEmployee(employeeEntity);
     }
 
